@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<head>
+       <title>Muthoot Institute of Technology and Science Puthencruz Webpage</title>
+    
+    <style>
+        /* General Setup & Typography */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 32px; 
+            background-color: #f0f4f8; /* Light gray background retained */
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* --- Main Layout: Single Content Area --- */
+        .main-content {
+            display: block; 
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        /* Panel/Section Styling */
+        .panel {
+            background-color: white;
+            padding: 24px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+            border: 1px solid #fecaca; /* Light Red border */
+        }
+
+        /* --- College Webpage Styling --- */
+        
+        .college-title {
+            font-size: 1.875rem; 
+            font-weight: 800;
+            color: #991b1b; /* Deep Red/Maroon */
+            margin: 0; 
+            padding: 0;
+            border: none;
+        }
+
+        /* Header: Contains only Logo and Title - Now centered on all screen sizes */
+        .college-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; /* Centers the logo-container block */
+            
+            /* Removed separating border, reduced margin */
+            border-bottom: none; 
+            padding-bottom: 16px; 
+            
+            margin-bottom: 12px; /* Space between header and new nav card */
+            padding: 16px;
+            background-color: #fef2f2; /* Light Red-50 */
+            border-radius: 12px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06); 
+        }
+        
+        .logo-container {
+            font-size: 1.875rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap; 
+            justify-content: center; /* Centers the content (logo and title) inside the container */
+        }
+
+        /* Navigation Menu: Now styled as a Card with Color */
+        .college-nav {
+            /* Card Styling */
+            background-color: #fef2f2; /* Light Red background added */
+            padding: 12px 24px;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border: 1px solid #fecaca; /* Light Red border */
+            margin-bottom: 24px; /* Space between nav card and hero */
+            
+            /* Flex Layout for Links */
+            display: flex;
+            gap: 24px;
+            justify-content: center; /* Center links on all screen sizes */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            width: 100%; 
+        }
+
+        .college-nav a {
+            color: #991b1b; /* Deep Red/Maroon link color for contrast */
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .college-nav a:hover {
+            color: #dc2626; /* Crimson Red on hover */
+            border-bottom-color: #dc2626;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            margin-bottom: 32px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* Opacity removed for clearer image */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Changed from red overlay to neutral black overlay */
+            background-color: rgba(0, 0, 0, 0.5); /* Neutral Black with opacity */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        .hero-title {
+            font-size: clamp(1.5rem, 5vw, 2.5rem); 
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #fee2e2; /* Light Red-100 */
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        /* General Content Section Styling (Used for About, Mission, Contact) */
+        .content-section {
+            margin-bottom: 32px;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 12px;
+            border: 1px solid #f3f4f6; /* Subtle border */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-section h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #991b1b; /* Deep Red/Maroon */
+            margin-bottom: 8px;
+            border-bottom: 2px solid #fef2f2;
+            padding-bottom: 4px;
+        }
+
+        /* Specific mission statement styling (border-left) */
+        .mission-statement {
+            background-color: #fef2f2; /* Light Red-50 */
+            border-left: 8px solid #b91c1c; /* Strong Red border */
+            padding-left: 16px; 
+            border-top: none; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .mission-statement p {
+            color: #4b5563;
+        }
+
+
+        /* Academic Departments */
+        .departments-container {
+            margin-bottom: 32px;
+        }
+
+        .departments-container h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #991b1b; /* Deep Red/Maroon */
+            margin-bottom: 16px;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px; 
+        }
+        
+        .program-card {
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            border: 1px solid #f3f4f6;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+            border-color: #fecaca; /* Light Red on hover */
+        }
+
+        .program-card h5 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #b91c1c; /* Strong Red */
+            margin-bottom: 4px;
+        }
+
+        .program-card p {
+            font-size: 0.875rem;
+            color: #4b5563; 
+            margin-top: 4px;
+        }
+
+        .program-link {
+            color: #dc2626; /* Crimson Red */
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: block;
+            margin-top: 12px;
+            text-decoration: none;
+        }
+        .program-link:hover {
+            color: #991b1b;
+            text-decoration: underline;
+        }
+
+        /* Contact Us Styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #4b5563;
+        }
+        .contact-info strong {
+            color: #991b1b;
+        }
+        .map-placeholder {
+            height: 300px;
+            background-color: #fef2f2; /* Light Red-50 */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b91c1c;
+            font-weight: 600;
+            border: 1px solid #fecaca;
+        }
+
+        /* Footer */
+        .college-footer {
+            margin-top: 48px;
+            padding-top: 16px;
+            border-top: 2px solid #fee2e2; /* Light Red border */
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280; 
+            background-color: #f9fafb; 
+            padding: 16px;
+            border-radius: 8px;
+        }
+        .college-footer a {
+            color: #6b7280;
+            text-decoration: none;
+        }
+        .college-footer a:hover {
+            color: #dc2626; /* Crimson Red hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Content: College Webpage (Full Width) -->
+    <main class="main-content">
+
+        <!-- College Webpage Section -->
+        <section id="college-webpage" class="panel">
+
+            <!-- Header: Logo and Title (Now visually separate from nav) -->
+            <header class="college-header">
+                <div class="logo-container">
+                    <!-- Placeholder for Muthoot Logo PNG/JPG (INCREASED SIZE) -->
+                    <img src="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\logo.jpg" alt="Muthoot Logo" style="width: 80px; height: 64px; object-fit: contain;">
+                    <!-- Main heading is now next to the logo -->
+                    <h2 class="college-title">Muthoot Institute of Technology and Science</h2>
+                </div>
+            </header>
+            
+            <!-- Navigation Menu Card (The new, separate card element) -->
+            <nav class="college-nav">
+                <a href="#about-us">About Us</a>
+                <a href="#academics">Academics</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#contact-us">Contact</a>
+            </nav>
+
+            <!-- Hero Section (Now with College Main Building Image) -->
+            <div class="hero-section">
+                <!-- Placeholder Image for College Main Building - REMOVED TEXT AND COLOR -->
+                <img src="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\mits.jpg" alt="Muthoot Institute Main Building View" class="hero-image">
+                <div class="hero-overlay">
+                    <h3 class="hero-title">
+                        Excellence in Technology and Science
+                    </h3>
+                    <p class="hero-subtitle">
+                        Muthoot Institute of Technology and Science, Puthencruz.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- About Us Section -->
+            <div id="about-us" class="content-section">
+                <h4>About Muthoot Institute of Technology and Science (MITS)</h4>
+                <p>Muthoot Institute of Technology and Science (MITS) is promoted by Muthoot M. George Institute of Technology, a Section 25 Company within the Muthoot Group. MITS is a self financing technical institution offering postgraduate and undergraduate engineering programmes, situated in the industrial suburb of Kochi, close to the Smart City and Info Park, approximately 15 kms from Vytilla Junction towards Muvattupuzha on the Cochin Madurai National Highway.
+
+The promoters with their commanding presence in the domains of Financial Services, Hospitality, Healthcare, Renewable Energy and Information Technology, are committed to building MITS as a centre of excellence, focusing purely on merit. This “temple of learning” will provide to the students, state-of-the-art infrastructure, highly qualified and proficient teachers from various faculty of engineering and allied streams, embedded in a conducive environment where focus will be on their harmonious development.</p>
+            </div>
+
+            <!-- Mission and Vision Statement -->
+            <div class="content-section mission-statement">
+                <h4>Our Vision and Mission</h4>
+                <p><strong>Vision:</strong> To be a centre of excellence for learning and research in engineering and technology, producing intellectually well-equipped and socially committed citizens possessing an ethical value system.</p>
+                <p><strong>Mission:</strong> * Offer well-balanced programme of instruction, practical exercise and opportunities in technology.<br>* Foster innovation and ideation of technological solutions on sustainable basis.<br>* Nurture a value system in students and engender in them a spirit of inquiry.</p>
+            </div>
+
+            <!-- Academic Departments Section -->
+            <div class="departments-container" id="academics">
+                <h4>Academic Departments & Programs</h4>
+                <!-- Responsive 3-column layout for programs -->
+                <div class="programs-grid">
+                    
+                    <!-- 1. Master of Computer Applications (MCA) -->
+                    <div class="program-card">
+                        <h5>MCA (Computer Applications)</h5>
+                        <p>Foundational and advanced studies in software development and IT management.</p>
+                        <a href="#" class="program-link">View Program &rarr;</a>
+                    </div>
+                    
+                    <!-- 2. Computer Science (AI/ML) -->
+                    <div class="program-card">
+                        <h5>CS (AI & Machine Learning)</h5>
+                        <p>Specializing in intelligent systems, neural networks, and deep learning.</p>
+                        <a href="#" class="program-link">View Program &rarr;</a>
+                    </div>
+                    
+                    <!-- 3. Computer Science (Cybersecurity) -->
+                    <div class="program-card">
+                        <h5>CS (Cybersecurity)</h5>
+                        <p>Training in network security, ethical hacking, and digital forensics.</p>
+                        <a href="#" class="program-link">View Program &rarr;</a>
+                    </div>
+                    
+                    <!-- 4. Civil Engineering (CIVIL) -->
+                    <div class="program-card">
+                        <h5>Civil Engineering</h5>
+                        <p>Design and construction of infrastructure, focusing on sustainable practices.</p>
+                        <a href="#" class="program-link">View Program &rarr;</a>
+                    </div>
+
+                    <!-- 5. Mechanical Engineering (MECH) -->
+                    <div class="program-card">
+                        <h5>Mechanical Engineering</h5>
+                        <p>Focus on thermodynamics, robotics, and advanced materials science.</p>
+                        <a href="#" class="program-link">View Program &rarr;</a>
+                    </div>
+                    
+                    <!-- 6. Electrical Engineering (EE) -->
+                    <div class="program-card">
+                        <h5>EE (Electrical Engineering)</h5>
+                        <p>Power systems, control theory, and electronics design.</p>
+                        <a href="#" class="program-link">View Program &rarr;</a>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Contact Us Section -->
+            <div id="contact-us" class="content-section">
+                <h4>Contact Us</h4>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p><strong>Muthoot Institute of Technology and Science<br>
+	
+                        <p>Email: admissions@muthoot-tech.edu</p>
+                        
+                        <p><strong>Physical Address:</strong></p>
+                        <p>Muthoot Institute of Technology and Science Campus,<br>
+                        Puthencruz Main Road, Tech City,<br>
+                        Ernakulam, KL 682308, India</p>
+
+                        <p>Office Hours: Monday - Friday, 9:00 AM - 5:00 PM</p>
+                    </div>
+                   
+                   </section>
+
+    </main>
+</body>
+</html>

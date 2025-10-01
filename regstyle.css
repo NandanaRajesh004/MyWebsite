@@ -1,0 +1,128 @@
+/* Background with softer gradient */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #fff5f5, #ffe8cc, #fff0e0);
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #b22222;
+    padding: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Form Card */
+form {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border: 2px solid #ffd700;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+    color: #444;
+}
+
+/* Inputs */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ffd700;
+    font-size: 15px;
+    transition: 0.3s;
+    background: #fff;
+}
+
+/* Focus effects */
+input:focus, textarea:focus, select:focus {
+    border-color: #b22222;
+    box-shadow: 0 0 6px rgba(178,34,34,0.4);
+    outline: none;
+}
+
+/* Radio & Checkbox */
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+/* Row layout */
+.row {
+    display: flex;
+    gap: 15px;
+}
+.row div {
+    flex: 1;
+}
+
+/* Section headers */
+.section-title {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background: #ffd700;
+    color: #b22222;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.register-btn {
+    display: inline-block;
+    width: 140px;
+    margin: 8px;
+    background: #ffd700;
+    color: #b22222;
+    border: 2px solid #b22222;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.register-btn:hover {
+    background: #b22222;
+    color: #ffd700;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+.buttons input {
+    width: 140px;
+    margin: 8px;
+    background: #ffd700;
+    color: #b22222;
+    border: 2px solid #b22222;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.buttons input:hover {
+    background: #b22222;
+    color: #ffd700;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}

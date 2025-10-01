@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCA Student Registration Form</title>
+    <link rel="stylesheet" href="C:\Users\Nandana\OneDrive\Pictures\Documents\Assignments\regstyle.css">
+</head>
+<body>
+    <h2>MCA Student Registration Form</h2>
+    <form>
+        <div class="section-title personal">Personal Details</div>
+        <!-- Name -->
+        <label>Full Name:</label>
+        <div class="row">
+            <div>
+                <input type="text" name="firstname" placeholder="First Name">
+            </div>
+            <div>
+                <input type="text" name="lastname" placeholder="Last Name">
+            </div>
+        </div>
+
+        <!-- Registration Number -->
+        <label for="regno">Registration Number:</label>
+        <input type="text" id="regno" name="regno" placeholder="Enter Registration Number">
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"> Male
+        <input type="radio" id="female" name="gender" value="Female"> Female
+        <input type="radio" id="other" name="gender" value="Other"> Other
+
+        <!-- DOB -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <div class="section-title contact">Contact Details</div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit number">
+
+        <label for="father">Father's Name:</label>
+        <input type="text" id="father" name="father" placeholder="Enter Father's Name">
+
+        <label for="mother">Mother's Name:</label>
+        <input type="text" id="mother" name="mother" placeholder="Enter Mother's Name">
+
+        <label for="parentphone">Parent's Phone:</label>
+        <input type="tel" id="parentphone" name="parentphone" placeholder="10-digit number">
+
+        <div class="section-title address">Address</div>
+        <input type="text" name="street" placeholder="Street / House Name">
+        <div class="row">
+            <div>
+                <input type="text" name="city" placeholder="City">
+            </div>
+            <div>
+                <input type="text" name="state" placeholder="State">
+            </div>
+        </div>
+        <input type="text" name="pincode" placeholder="PIN Code">
+
+        <div class="section-title academic">Academic Details</div>
+        <label for="course">Course Selection:</label>
+        <select id="course" name="course">
+            <option value="civil">Civil Engineering</option>
+            <option value="cs-ai">Computer Science (AI)</option>
+            <option value="cs-cyber">Computer Science (Cyber Security)</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="mca">MCA</option>
+        </select>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <label>
+            <input type="checkbox" name="agree"> I agree to the terms and conditions
+        </label>
+
+        <div class="buttons">
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </div>
+	<div class="buttons">
+    <a href="clg.html" class="register-btn">Go to College Website</a>
+	</div>
+    </form>
+</body>
+</html>
